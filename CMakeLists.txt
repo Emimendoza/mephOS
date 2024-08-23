@@ -13,9 +13,9 @@ add_link_options(-T linker.ld -lgcc -nostdlib)
 # Copy the linker.ld file to the build directory
 configure_file(kernel/impl/linker.ld linker.ld COPYONLY)
 # standard lib
-include_directories(stdlib/headers)
-file(GLOB STD_SOURCE stdlib/impl/*.c)
-add_library(stdlib STATIC ${STD_SOURCE})
+include_directories(kstdlib/headers)
+file(GLOB KSTD_SOURCE kstdlib/impl/*.c)
+add_library(kstdlib STATIC ${KSTD_SOURCE})
 
 # libfdt
 file(GLOB LIBFDT_SOURCES kernel/external/dtc/libfdt/*.c)
@@ -32,5 +32,5 @@ target_include_directories(libfdt PRIVATE kernel/external/dtc/libfdt)
 file(GLOB SOURCES kernel/impl/*.c kernel/impl/*.s)
 
 add_executable(kernelbin ${SOURCES})
-target_link_libraries(kernelbin libfdt  stdlib)
-target_include_directories(kernelbin PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kernel/generated/headers")
+target_link_libraries(kernelbin libfdt  kstdlib)
+target_include_directories(kernelbin PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kernel/generated/headers" kernel/headers)

@@ -1,0 +1,5 @@
+
+#ifndef MEPHOS_STDLIB_H
+#define MEPHOS_STDLIB_H
+
+#endif //MEPHOS_STDLIB_H

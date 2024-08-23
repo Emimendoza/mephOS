@@ -1,5 +1,5 @@
-#ifndef RISCV_STRING_H
-#define RISCV_STRING_H
+#ifndef MEPHOS_STRING_H
+#define MEPHOS_STRING_H
 #include <stddef.h>
 
 // Memory
@@ -17,4 +17,4 @@ size_t strlen(const char *str);
 const char *strchr(const char *s, int c);
 unsigned long int strtoul (const char* str, char** endptr, int base);
 
-#endif //RISCV_STRING_H
+#endif //MEPHOS_STRING_H

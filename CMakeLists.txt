@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.28)
-project(riscv C ASM)
+project(mephOS C ASM)
 
 set(CMAKE_C_STANDARD 23)
 set(CMAKE_CXX_STANDARD 23)

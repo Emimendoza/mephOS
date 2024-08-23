@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Kernel" type="com.jetbrains.cidr.embedded.customgdbserver.type" factoryName="com.jetbrains.cidr.embedded.customgdbserver.factory" PROGRAM_PARAMS="-s -S -machine virt -smp 2 -bios kernelbin -serial mon:stdio -nographic" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file://$CMakeCurrentBuildDir$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="mephOS" TARGET_NAME="kernelbin" CONFIG_NAME="Debug" version="1" RUN_TARGET_PROJECT_NAME="mephOS" RUN_TARGET_NAME="kernelbin">
+    <custom-gdb-server version="1" gdb-connect="tcp:127.0.0.1:1234" executable="/usr/bin/qemu-system-riscv64" warmup-ms="0" download-type="UPDATED_ONLY" reset-cmd="" reset-type="AFTER_DOWNLOAD" connection-mode="REMOTE" gdbserver-enable="false" console-enabled="false" console-port="0">
+      <debugger kind="GDB" isBundled="true" />
+      <extra-debugger-params debugger-working-dir="" debugger-env-pass-parent="true" custom-script="" />
+    </custom-gdb-server>
+    <method v="2">
+      <option name="CLION.COMPOUND.BUILD" enabled="true" />
+    </method>
+  </configuration>
+</component>
